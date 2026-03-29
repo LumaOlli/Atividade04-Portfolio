@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luma Oliveira | Analista de Requisitos & QA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CONFIGURAÇÕES GERAIS */
+        :root {
+            --bg-color: #d391ed; 
+            --card-bg: rgba(255, 255, 255, 0.85); 
+            --text-dark: #2d3436;
+            --accent-color: #6c5ce7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .justificado {
+            text-align: justify;
+        }
+
+        /* NAVBAR - Efeito Glass */
+        .navbar {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid rgba(255, 255, 255, 0.5);
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        .hero-text h2 {
+            font-weight: 400;
+            color: #4a4a4a;
+        }
+
+        /* SEÇÕES E CARDS */
+        .section {
+            padding: 40px 0;
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+            color: var(--accent-color);
+        }
+
+        h4 {
+            margin-top: 15px;
+            color: var(--accent-color);
+        }
+
+        /* LISTAS */
+        .main-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .main-list > li {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .sub-list {
+            margin-top: 10px;
+            padding-left: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* EXPERIÊNCIA ITEM */
+        .exp-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+        }
+
+        .exp-item:last-child {
+            border-bottom: none;
+        }
+
+        /* CONTATO */
+        .contact {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .contact a {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .contact a:hover {
+            background: var(--text-dark);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        footer {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin: 5px 0;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Qual a experiência profissional de Luma Oliveira?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Luma é estagiária na AltoTech - Soluções em TI e atua na coordenação de líderes no projeto Trilha do Empreendedorismo."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Quais projetos acadêmicos Luma participou na UFERSA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Participou dos projetos Carcará e Laboratório Vivo, além de voluntariado no ECOP e Ciência no Parque."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Como entrar em contato com Luma?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Através do e-mail maria.oliveira11951@aluno.ufersa.edu.br."
+        }
+      }]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#knowledge">Conhecimentos</a></li>
+            <li><a href="#experiences">Experiências</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-container">
+            <img src="images/perfil.jpg" alt="Foto de Luma Oliveira" class="profile-pic">
+            <div class="hero-text">
+                <h1>Olá, sou Luma Oliveira</h1>
+                <h2>Analista de Requisitos | QA</h2>
+                <p class="justificado" style="max-width: 650px; margin: 20px auto 0 auto;">
+                    Profissional formada em Tecnologia da Informação, cursando Engenharia de Software,
+                    com atuação em análise de requisitos e qualidade de software.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="section glass-card" id="about">
+            <h3>Sobre mim</h3>
+            <p class="justificado">
+                Sou aluna do curso de Engenharia de Software na Universidade Federal Rural do Semi-Árido (UFERSA),
+                Campus Pau dos Ferros, com egresso previsto para 2025. Iniciei minha trajetória acadêmica em 2021,
+                no curso de Bacharelado Interdisciplinar em Tecnologia da Informação (BTI). Busco aprofundar meus 
+                conhecimentos através de atuação prática no mercado e projetos de liderança.
+            </p>
+        </section>
+
+        <section class="section glass-card" id="knowledge">
+            <h3>Conhecimentos</h3>
+            <ul class="main-list">
+                <li>
+                    <strong>Análise de Requisitos</strong>
+                    <p class="justificado">Levantamento, documentação e validação de requisitos para alinhar negócio e tecnologia.</p>
+                    <ul class="sub-list">
+                        <li>Levantamento e elicitação de requisitos.</li>
+                        <li>Documentação funcional e Modelagem UML.</li>
+                        <li>Escrita de histórias de usuário.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Teste de Software (QA)</strong>
+                    <p class="justificado">Garantia da qualidade com testes manuais e automatizados para entregas confiáveis.</p>
+                    <ul class="sub-list">
+                        <li>Testes manuais e automatizados.</li>
+                        <li>Automação com Jest e JUnit 4.</li>
+                        <li>Análise e documentação de resultados.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="section glass-card" id="experiences">
+            <h3>Experiência Profissional e Acadêmica</h3>
+            
+            <div class="justificado">
+                <div class="exp-item">
+                    <h4> AltoTech - Soluções em TI</h4>
+                    <p><strong>Estagiária</strong> | Atuação na análise dos requisitos em tecnologia da informação, aplicando conceitos de engenharia de requisitos no dia a dia.</p>
+                </div>
+
+                <div class="exp-item">
+                    <h4>Trilha do Empreendedorismo</h4>
+                    <p><strong>Coordenadora de Líderes & Líder de Equipe</strong> | Atuação na gestão e coordenação estratégica entre líderes do projeto, acumulando a liderança direta de equipe e foco em resultados coletivos.</p>
+                </div>
+
+                <div class="exp-item">
+                    <h4>rajetória na UFERSA</h4>
+                    <p>
+                        Participação ativa em projetos institucionais como o <strong>Carcará</strong> e o <strong>Laboratório Vivo</strong>, focando em análise de requisitos. 
+                        Voluntária em minicursos no <strong>ECOP</strong> e no projeto <strong>Ciência no Parque</strong>, fortalecendo a extensão universitária.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <h3>Contato</h3>
+            <div class="contact">
+                <a href="mailto:maria.oliveira11951@aluno.ufersa.edu.br">📧 E-mail</a>
+                <a href="https://github.com/LumaOlli" target="_blank">💻 GitHub</a>
+                <a href="https://www.linkedin.com/in/luma-oliveira-8b42a31a6/" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Contato: maria.oliveira11951@aluno.ufersa.edu.br</p>
+        <p>&copy; 2026 - Página hospedada no AWS Amplify.</p>
+    </footer>
+
+</body>
+</html>
